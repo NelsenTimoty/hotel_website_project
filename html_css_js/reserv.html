@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Hotel Website</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css" integrity="sha512-UTNP5BXLIptsaj5WdKFrkFov94lDx+eBvbKyoe1YAfjeRPC+gT5kyZ10kOHCfNZqEui1sxmqvodNUx3KbuYI/A==" crossorigin="anonymous"
+    referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+  <script src="https://kit.fontawesome.com/d12ec11675.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+  <header class="header" id="navigation-menu">
+    <div class="container">
+      <nav>
+        <a href="home.html" class="logo"><h1>VhoTel</h1></a>
+
+        <ul class="nav-menu">
+            <li> <a href="home.html" class="nav-link">Home</a> </li>
+            <li> <a href="about.html" class="nav-link">About</a> </li>
+            <li> <a href="rooms.html" class="nav-link">Rooms</a> </li>
+            <li> <a href="facil.html" class="nav-link">Facilities</a> </li>
+            <li> <a href="reserv.html" class="nav-link">Reservation</a> </li>
+        </ul>
+
+        <div class="hambuger">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+      </nav>
+    </div>
+  </header>
+  <script src="js.js"></script>
+  <section class="book">
+    <div class="container flex">
+        <form>
+            <div class="input grid">
+                <div class="box">
+                    <label>Name</label>
+                    <input type="text" placeholder="Name" id="firstName" onkeyup="validateFirst()" required>
+                    <span id="first-error"></span>
+                </div>
+
+                <div class="box">   
+                    <label>Email</label>
+                    <input type="text" placeholder="Email" id="lastName" onkeyup="validateLast()" required>
+                    <span id="last-error"></span>
+                </div>
+
+                <div class="box">
+                    <label>Check-In Date</label> <br>
+                    <input type="date" placeholder="0" id="inDate" onkeyup="validateIn()" required>
+                    <span id="in-error"></span>
+                </div>
+
+                <div class="box">
+                    <label>Check-Out Date</label> <br>
+                    <input type="date" placeholder="0" id="outDate" required>
+                    <span id="out-error"></span>
+                </div>
+                
+                <div class="box">
+                        <label>Type of Room</label> <br>
+                        <select name="room" id="room" required>
+                            <option value="">Choose</option>
+                            <option value="1">Standard Room</option>
+                            <option value="2">Executive Room</option>
+                            <option value="3">Presidential Room</option>
+                        </select>
+                </div>
+                <div class="search">
+                    <button type="submit" id="submit" onclick="finalValidation()">BOOK</button><br><br>
+                    <span id="submit-error"></span>
+                </div>
+            </div>
+        </form>
+    </div>
+  </section>
+  <script src="validation.js"></script> 
+  <br><br><br><br><br><br><br>
+  <section class="gallary mtop " id="gallary">
+    <div class="container">
+      <div class="heading_top flex1">
+        <div class="heading">
+          <h2>What Are You Waiting For?</h2>
+        </div>
+      </div>
+
+      <div class="owl-carousel owl-theme">
+        <div class="item">
+          <img src="image/g1.jpg" alt="">
+        </div>
+        <div class="item">
+          <img src="image/g2.jpg" alt="">
+        </div>
+        <div class="item">
+          <img src="image/g3.jpg" alt="">
+        </div>
+        <div class="item">
+          <img src="image/g4.jpg" alt="">
+        </div>
+        <div class="item">
+          <img src="image/g5.jpg" alt="">
+        </div>
+        <div class="item">
+          <img src="image/g6.jpg" alt="">
+        </div>
+        <div class="item">
+          <img src="image/g7.jpg" alt="">
+        </div>
+        <div class="item">
+          <img src="image/g8.jpg" alt="">
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.js" integrity="sha512-gY25nC63ddE0LcLPhxUJGFxa2GoIyA5FLym4UJqHDEMHjp8RET6Zn/SHo1sltt3WuVtqfyxECP38/daUc/WVEA==" crossorigin="anonymous"
+    referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous"
+    referrerpolicy="no-referrer"></script>
+  <script>
+    $('.owl-carousel').owlCarousel({
+      loop: true,
+      margin: 0,
+      nav: false,
+      dots: false,
+      autoplay: true,
+      slideTransition: 'linear',
+      autoplayTimeout: 4000,
+      autoplaySpeed: 4000,
+      responsive: {
+        0: {
+          items: 1
+        },
+        768: {
+          items: 3
+        },
+        1000: {
+          items: 5
+        }
+      }
+    })
+  </script>
+  <script src="js.js"></script>
+  <br><br><br><br><br>
+    <footer>
+        <div class="container grid top">
+            <div class="box">
+                <br><br><br><br>
+                <h1>VhoTel</h1>
+            </div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box">
+                <h3>Contact Us</h3>
+                <ul>
+                    <li>Alam Sutera, Binus University</li>
+                    <li><i class="far fa-envelope"></i>nelsen.timoty@binus.ac.id</li>
+                    <li><i class="fa-solid fa-phone"></i>0812 8817 5242</li>
+                    <li><i class="fa-solid fa-phone"></i>0812 7982 9872</li>
+                    <li><i class="far fa-comments"></i>0/ 0 Customer Services </li>
+                </ul>
+            </div>
+        </div>
+    </footer><br><br><br>
+  <script src="js.js"></script>
+</body>
+</html>
